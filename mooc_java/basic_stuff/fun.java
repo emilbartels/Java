@@ -1,4 +1,4 @@
-package mooc_java;
+package mooc_java.basic_stuff;
 
 public class fun {
     public static void main(String[] args) {
