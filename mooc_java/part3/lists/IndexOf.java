@@ -31,6 +31,10 @@ public class IndexOf {
             i++;
         }
 
+        System.out.println("Her er alle tallene: ");
+        for (int nummer: numbers) {
+            System.out.println(nummer);
+        }
 
     }
 }

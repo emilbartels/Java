@@ -15,5 +15,6 @@ public class SecondPlusThird {
         }
         System.out.println("First number: " + tal.get(0));
         System.out.println("Sum of second & third: " + (tal.get(1) + tal.get(2)));
+
     } 
 }
