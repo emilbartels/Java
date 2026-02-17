@@ -102,9 +102,10 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         HashMap<String, Bicycle> hashedBicycle = new HashMap<>();
+        System.out.println("");
+        System.out.println("");
 
-        System.out.println("");
-        System.out.println("");
+        //Input af keys
         System.out.println("To quit enter 'exit'");
         System.out.print("Input key-names for hashtable: ");
         for (int i = 0; i < linkedBikes.size(); i++) {
@@ -113,8 +114,23 @@ public class Main {
                 break;
             }
             hashedBicycle.put(key, linkedBikes.get(i));
-            System.out.println("Key " + key + " svarer til " + hashedBicycle.get(key).getName()); 
         }
+        
+        //søge for keys
+        System.out.println("\nSkriv en key for at finde en cykel (exit for at stoppe):");
+    while (true) {
+        String searchKey = input.nextLine();
+        if (searchKey.equals("exit")) break;
+
+        Bicycle b = hashedBicycle.get(searchKey);
+        if (b == null) {
+            System.out.println("Key findes ikke: " + searchKey);
+        } 
+        else {
+            System.out.println("Key " + searchKey + " svarer til " + b.getName() + " gear: " + b.getGear() + " speed: " + b.getSpeed());
+        }
+}
+
         
         
         /*
